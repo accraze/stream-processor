@@ -20,6 +20,8 @@ make process
 You can monitor the workers in real-time using the `flower` container hosted at:
 http://localhost:8888/
 
+Also, the worker container has been released to Dockerhub:
+https://hub.docker.com/r/accraze/stream-processor
 
 ### Running locally
 First make sure you have [RabbitMQ](https://www.rabbitmq.com/) installed and running on your local machine.
