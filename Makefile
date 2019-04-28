@@ -9,7 +9,7 @@ reset:
 	docker-compose down
 
 test:
-	docker exec -it app sh -c "python -m pytest --disable-pytest-warnings"
+	docker exec -it stream-processor_worker_1 sh -c "python -m pytest --disable-pytest-warnings"
 
 process:
 	docker exec -it stream-processor_worker_1 sh -c "python -u -m src.processor; exit $?"
