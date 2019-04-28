@@ -5,6 +5,8 @@ services:
     build: .
     environment:
       AMQP_URI: ${AMQP_URI}
+      PROCESSOR_EVENT_FILE: "/stream-processor/sampled_rc.json"
+      PROCESSOR_RESULTS_OUTFILE: "/stream-processor/results.json"
     volumes:
       - .:/stream-processor
     depends_on:
