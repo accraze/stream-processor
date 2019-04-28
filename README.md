@@ -1,5 +1,6 @@
 # stream-processor
 A simple, scalable stream processor powered via Celery and RabbitMQ.
+This was developed using Python 3.7.2 and is not compatible with Python 2.7
 
 ## Setup
 
@@ -27,7 +28,7 @@ https://hub.docker.com/r/accraze/stream-processor
 First make sure you have [RabbitMQ](https://www.rabbitmq.com/) installed and running on your local machine.
 Now create a virtualenv:
 ```
-virtualenv -p python 3 env
+virtualenv -p python3 env
 source env/bin/activate
 ```
 
