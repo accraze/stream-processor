@@ -1,11 +1,13 @@
-from src.celery import app
 import time
 
+from src.celery import app
 
-@app.task(bind=True,default_retry_delay=10) # set a retry delay, 10 equal to 10s
+
+@app.task(bind=True, default_retry_delay=10)
 def process_event(self, event):
-	process_change(event['wait'])
-	return event
+    process_change(event['wait'])
+    return event
+
 
 def process_change(wait_secs):
     start = time.time()

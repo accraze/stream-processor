@@ -1,6 +1,6 @@
+import filecmp
 import json
 import time
-import filecmp
 from collections import deque
 
 from src.settings import PROCESSOR_EVENT_FILE, PROCESSOR_RESULTS_OUTFILE
