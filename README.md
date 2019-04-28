@@ -5,13 +5,13 @@ A simple, scalable stream processor powered via Celery and RabbitMQ.
 
 ### Running via Docker
 
-First, build all containers and start all workers. *Note:* this will start 5 workers. You can change the number of workers in the Makefile script.
+First, build and start all containers. 
+**Note:** this will start 5 workers. You can scale the number of workers in the Makefile script.
 ```
 make start
 ```
 
-In another terminal, you can run the following command to process the sampled
-events:
+In another terminal, once all containers have started, you can run the following command to process the sampled events:
 
 ```
 make process
@@ -23,7 +23,7 @@ http://localhost:8888/
 
 ### Running locally
 First make sure you have [RabbitMQ](https://www.rabbitmq.com/) installed and running on your local machine.
-Next create a virtualenv:
+Now create a virtualenv:
 ```
 virtualenv -p python 3 env
 source env/bin/activate
@@ -39,7 +39,7 @@ export PROCESSOR_EVENT_FILE="sampled_rc.json"
 export PROCESSOR_RESULTS_OUTFILE="results.json"
 ```
 
-Start celery workers (*note:* this will start 5 workers):
+Start celery workers (**Note:** this will start 5 workers):
 
 ```
 celery multi start 5 -A src worker --loglevel=info
@@ -57,7 +57,7 @@ celery multi stop 5
 ```
 
 
-### Tests
+## Tests
 
 You can run the tests inside a worker container via Docker as follows:
 ```
